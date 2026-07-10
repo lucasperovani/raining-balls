@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Raining Balls</title>
+
+	<meta name="description"
+		content="Keep the ball alive as the platforms rise. A simple game that quickly turns into chaos.">
+
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+
+		body{
+			font-family:Arial, Helvetica, sans-serif;
+			background:#0f1118;
+			color:white;
+		}
+
+		header{
+			max-width:1200px;
+			margin:auto;
+			padding:25px;
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+		}
+
+		.logo{
+			font-size:34px;
+			font-weight:bold;
+			color:#ff5333;
+		}
+
+		nav a{
+			color:white;
+			text-decoration:none;
+			margin-left:30px;
+			transition:.25s;
+		}
+
+		nav a:hover{
+			color:#ff5333;
+		}
+
+		.hero{
+
+			max-width:1200px;
+			margin:auto;
+			min-height:85vh;
+
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+
+			gap:60px;
+
+			padding:40px;
+		}
+
+		.hero-text{
+			flex:1;
+		}
+
+		h1{
+
+			font-size:60px;
+			margin-bottom:20px;
+			line-height:1.1;
+
+		}
+
+		.subtitle{
+
+			font-size:22px;
+			color:#cfcfcf;
+			line-height:1.6;
+
+			margin-bottom:35px;
+
+		}
+
+		.buttons{
+
+			display:flex;
+			gap:20px;
+			flex-wrap:wrap;
+
+		}
+
+		.btn{
+
+			display:inline-block;
+			padding:16px 32px;
+
+			border-radius:12px;
+
+			text-decoration:none;
+
+			font-weight:bold;
+
+			transition:.2s;
+
+		}
+
+		.play{
+
+			background:#ff5333;
+			color:white;
+
+		}
+
+		.play:hover{
+
+			transform:translateY(-3px);
+
+		}
+
+		.privacy{
+
+			border:2px solid white;
+			color:white;
+
+		}
+
+		.privacy:hover{
+
+			background:white;
+			color:black;
+
+		}
+
+		.hero-image{
+
+			flex:1;
+			text-align:center;
+
+		}
+
+		.hero-image img{
+
+			width:100%;
+			max-width:420px;
+
+			border-radius:30px;
+
+			box-shadow:
+				0 30px 70px rgba(0,0,0,.55);
+
+		}
+
+		footer{
+
+			text-align:center;
+			padding:40px;
+			color:#9d9d9d;
+
+		}
+
+		@media(max-width:900px){
+
+			.hero{
+
+				flex-direction:column-reverse;
+				text-align:center;
+
+			}
+
+			h1{
+
+				font-size:46px;
+
+			}
+
+			.buttons{
+
+				justify-content:center;
+
+			}
+
+		}
+
+	</style>
+
+</head>
+<body>
+
+<header>
+
+	<div class="logo">
+		Raining Balls
+	</div>
+
+	<nav>
+
+		<a href="privacy-policy.html">Privacy Policy</a>
+
+	</nav>
+
+</header>
+
+<section class="hero">
+
+	<div class="hero-text">
+
+		<h1>
+			Keep the ball alive.
+		</h1>
+
+		<p class="subtitle">
+
+			What started as a relaxing game quickly became pure chaos.
+
+			Stay on the screen while the platforms keep rising forever.
+
+			Beat your high score and see how long you can survive.
+
+		</p>
+
+		<div class="buttons">
+
+			<a href="#" class="btn play">
+				Download Soon
+			</a>
+
+			<a href="privacy-policy.html" class="btn privacy">
+				Privacy Policy
+			</a>
+
+		</div>
+
+	</div>
+
+	<div class="hero-image">
+
+		<img src="assets/menu.png" alt="Raining Balls">
+
+	</div>
+
+</section>
+
+<footer>
+
+	© 2026 Raining Balls
+
+	<br><br>
+
+	Made by three friends who accidentally created chaos.
+
+</footer>
+
+</body>
+</html>
