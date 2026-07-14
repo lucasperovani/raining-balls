@@ -32,9 +32,18 @@
 		}
 
 		.logo{
+			display:flex;
+			align-items:center;
+			gap:15px;
+
 			font-size:34px;
 			font-weight:bold;
 			color:#ff5333;
+		}
+
+		.logo img{
+			width:55px;
+			height:55px;
 		}
 
 		nav a{
@@ -136,9 +145,76 @@
 		}
 
 		.hero-image{
-
 			flex:1;
-			text-align:center;
+			display:flex;
+			justify-content:center;
+		}
+
+		.carousel{
+
+			position:relative;
+
+			width:420px;
+			max-width:100%;
+
+		}
+
+		.slide{
+
+			position:absolute;
+
+			inset:0;
+
+			width:100%;
+
+			border-radius:30px;
+
+			opacity:0;
+
+			transition:opacity .8s ease;
+
+			box-shadow:
+				0 30px 70px rgba(0,0,0,.55);
+
+		}
+
+		.slide.active{
+
+			opacity:1;
+			position:relative;
+
+		}
+
+		.dots{
+
+			position:absolute;
+
+			bottom:-35px;
+
+			width:100%;
+
+			display:flex;
+			justify-content:center;
+			gap:10px;
+
+		}
+
+		.dot{
+
+			width:12px;
+			height:12px;
+
+			border-radius:50%;
+
+			background:#555;
+
+			transition:.3s;
+
+		}
+
+		.dot.active{
+
+			background:#ff5333;
 
 		}
 
@@ -193,13 +269,12 @@
 <header>
 
 	<div class="logo">
-		Raining Balls
+		<img src="assets/logo.png" alt="Logo">
+		<span>Raining Balls</span>
 	</div>
 
 	<nav>
-
 		<a href="privacy-policy.html">Privacy Policy</a>
-
 	</nav>
 
 </header>
@@ -238,9 +313,26 @@
 
 	<div class="hero-image">
 
-		<img src="assets/menu.png" alt="Raining Balls">
+	<div class="carousel">
+
+		<img class="slide active" src="assets/menu.png">
+
+		<img class="slide" src="assets/gameplay1.png">
+
+		<img class="slide" src="assets/gameplay2.png">
+
+		<img class="slide" src="assets/gameplay3.png">
+
+		<div class="dots">
+			<span class="dot active"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
 
 	</div>
+
+</div>
 
 </section>
 
@@ -253,6 +345,36 @@
 	Made by three friends who accidentally created chaos.
 
 </footer>
+
+<script>
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let current = 0;
+
+function showSlide(index){
+
+	slides.forEach(s => s.classList.remove("active"));
+	dots.forEach(d => d.classList.remove("active"));
+
+	slides[index].classList.add("active");
+	dots[index].classList.add("active");
+
+}
+
+setInterval(()=>{
+
+	current++;
+
+	if(current >= slides.length)
+		current = 0;
+
+	showSlide(current);
+
+},3000);
+
+</script>
 
 </body>
 </html>
